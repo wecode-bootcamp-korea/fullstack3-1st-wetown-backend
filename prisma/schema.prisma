@@ -9,3 +9,69 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model users {
+  id Int @id @default(autoincrement())
+  name String
+  birthday DateTime @db.Time(3)
+  gender String
+  phone_number String
+  user_id String
+  password String
+  address String?
+  email String
+  created_at DateTime @default(now())
+  policies policies[]
+  carts carts[]
+}
+
+model policies {
+  id Int @id @default(autoincrement())
+  is_essential_agreed Boolean @default(false)
+  is_optional_agreed Boolean? @default(false)
+  user_id Int
+  users users @relation(fields: [user_id], references: [id])
+}
+
+model categories {
+  id Int @id @default(autoincrement())
+  name String
+  products products[]
+}
+
+model products {
+  id Int @id @default(autoincrement())
+  kor_name String
+  eng_name String
+  price Int
+  category_id Int
+  is_new Boolean @default(false)
+  sale Decimal?
+  images images[]
+  carts carts[]
+  categories categories @relation(fields: [category_id], references: [id])
+}
+
+model images {
+  id Int @id @default(autoincrement())
+  url String
+  product_id Int
+  products products @relation(fields: [product_id], references: [id])
+}
+
+model carts {
+  id Int @id @default(autoincrement())
+  product_id Int
+  user_id Int
+  products products @relation(fields: [product_id], references: [id])
+  users users @relation(fields: [user_id], references: [id])
+}
+
+
+
+
+
+
+//db관련 스네이크
+
+//나머지 카멜케이스
