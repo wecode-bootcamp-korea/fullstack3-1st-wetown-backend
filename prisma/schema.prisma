@@ -13,10 +13,9 @@ datasource db {
 model users {
   id           Int        @id @default(autoincrement())
   name         String
-  birthday     DateTime   @db.Time(3)
   gender       String
   phone_number String
-  user_id      String
+  nickname     String
   password     String
   address      String?
   email        String
@@ -39,17 +38,25 @@ model categories {
   products products[]
 }
 
+model subcategories {
+  id       Int        @id @default(autoincrement())
+  name     String
+  products products[]
+}
+
 model products {
-  id          Int        @id @default(autoincrement())
-  kor_name    String
-  eng_name    String
-  price       Int
-  category_id Int
-  is_new      Boolean    @default(false)
-  sale        Decimal?
-  images      images[]
-  carts       carts[]
-  categories  categories @relation(fields: [category_id], references: [id])
+  id             Int             @id @default(autoincrement())
+  kor_name       String
+  eng_name       String
+  price          Int
+  category_id    Int
+  subcategory_id Int
+  is_new         Boolean         @default(false)
+  sale           Decimal?
+  images         images[]
+  carts          carts[]
+  categories     categories      @relation(fields: [category_id], references: [id])
+  subcategories  subcategories[] @relation(fields: [subcategory_id], references: [id])
 }
 
 model images {
