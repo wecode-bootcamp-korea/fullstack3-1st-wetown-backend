@@ -33,15 +33,18 @@ model policies {
 }
 
 model categories {
-  id       Int        @id @default(autoincrement())
-  name     String
-  products products[]
+  id            Int             @id @default(autoincrement())
+  name          String
+  products      products[]
+  subcategories subcategories[]
 }
 
 model subcategories {
-  id       Int        @id @default(autoincrement())
-  name     String
-  products products[]
+  id          Int         @id @default(autoincrement())
+  name        String
+  category_id Int
+  products    products[]
+  categories  categories? @relation(fields: [category_id], references: [id])
 }
 
 model products {
@@ -49,10 +52,10 @@ model products {
   kor_name       String
   eng_name       String
   price          Decimal         @db.Decimal(1, 1)
-  quantity       Int             @default(10)
+  quantity       Int?            @default(10)
   category_id    Int
   subcategory_id Int
-  sale_rate      Decimal         @db.Decimal(1, 1)
+  sale_rate      Decimal?        @db.Decimal(1, 1)
   is_new         Boolean         @default(false)
   created_at     DateTime        @default(now())
   images         images[]
