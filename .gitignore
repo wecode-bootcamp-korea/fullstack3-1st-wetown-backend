@@ -1,4 +1,14 @@
-node_modules
-.eslintcache
+
 # Keep environment variables out of version control
 .env
+
+# MAC OS
+.DS_Store
+
+# Node
+node_modules
+logs
+*.log
+npm-debug.log*
+
+.eslintcache
