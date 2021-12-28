@@ -1,4 +1,4 @@
-INSERT INTO products(kor_name, eng_name, price, category_id, subcategory_id,is_new, sale)
+INSERT INTO products(kor_name, eng_name, price, category_id, subcategory_id,is_new, sale_rate)
 VALUES
 ("고양이 퓨레 연어&비프","Cat Puree Salmon&Beef",14000,2,1,true,15),
 ("고양이 간식 참치","cat snack tuna fish",11000,2,1,false,5),

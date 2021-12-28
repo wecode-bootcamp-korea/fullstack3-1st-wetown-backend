@@ -1,9 +1,9 @@
 import express from 'express';
-import userRouter from './userRouter';
+import prodctFilterRouter from './productFilterRouter';
 
 const router = express.Router();
 
-router.use('/users', userRouter);
+router.use('/category', prodctFilterRouter);
 // router.use('/products', productRouter);
 
 export default router;

@@ -7,7 +7,7 @@ INSERT INTO
     category_id,
     subcategory_id,
     is_new,
-    sale
+    sale_rate
   ) VALUES (
     "파충류 성장 빛",
     "EDJ T5 Light",
