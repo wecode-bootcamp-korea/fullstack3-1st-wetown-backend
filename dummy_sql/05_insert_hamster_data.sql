@@ -1,15 +1,15 @@
 INSERT INTO products(kor_name, eng_name, price, category_id, subcategory_id, is_new, sale)
   VALUES
-  ("햄스터 해먹 침대 ", "Hamster Bed Hanging Hammock House", 5000, 4, 3, true),
-  ("햄스터 나무 장난감", "Hamster Natural Wooden Chew Toys", 15000, 4, 2, true),
-  ("바퀴달린 햄스터 케이지", "Hamster Cages with Wheels",45000, 4, 3, true),
-  ("햄스터 치아 건강 관리 장난감", "Hamster Teeth Molar Chew Toy", 5000, 4, 4, true),
+  ("햄스터 해먹 침대 ", "Hamster Bed Hanging Hammock House", 5000, 4, 3, true,null),
+  ("햄스터 나무 장난감", "Hamster Natural Wooden Chew Toys", 15000, 4, 2, true,null),
+  ("바퀴달린 햄스터 케이지", "Hamster Cages with Wheels",45000, 4, 3, true,null),
+  ("햄스터 치아 건강 관리 장난감", "Hamster Teeth Molar Chew Toy", 5000, 4, 4, true,null),
   ("햄스터 패스트 푸드", "Quik Hamster Food", 4500, 4, 1, true, 10),
-  ("햄스터 씹는 간식", "Hamster Chew Treat", 2000, 4, 1, false),
+  ("햄스터 씹는 간식", "Hamster Chew Treat", 2000, 4, 1, false,null),
   ("햄스터 이동 다리", " Hamster House Bridge", 10000, 4, 1, true, 10),
   ("햄스터 급냉동 고기간식 10종", "Hamster 10 kinds of meat freeze-dried", 15000, 4, 1, true, 15),
-  ("햄스터 마른 야채 간식", "Hamster Assorted Dried Vegetable Snacks", 8500, 4, 1, true),
-  ("햄스터 조깅 운동 볼", "Hamster Playing Jogging Exercise Ball", 2500, 4, 4, true);
+  ("햄스터 마른 야채 간식", "Hamster Assorted Dried Vegetable Snacks", 8500, 4, 1, true,null),
+  ("햄스터 조깅 운동 볼", "Hamster Playing Jogging Exercise Ball", 2500, 4, 4, true,null);
 
 
 

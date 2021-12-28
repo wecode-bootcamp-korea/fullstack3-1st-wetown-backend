@@ -10,5 +10,4 @@ const allProductNewestFilter = async category_id => {
 
 // url localhost:8000/category/2/?sort_method=1
 // select products.id, eng_name, price, is_new, sale, name, url from products join categories on category_id = categories.id join images on products.id = images.product_id where images.is_main=true;
-// select products.id, eng_name, price, is_new, sale, name, subcategories.name, url from products
-// join categories on category_id = categories.id join images on products.id = images.product_id join
+// select products.id, eng_name, price, is_new, sale, categories.name, subcategories.name, url from products join categories on category_id = categories.id join images on products.id = images.product_id join subcategories on subcategories.id = subcategory_id where categories.name = "dog" and images.is_main = true;
