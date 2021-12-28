@@ -52,7 +52,7 @@ model products {
   category_id    Int
   subcategory_id Int
   is_new         Boolean         @default(false)
-  sale           Decimal?
+  sale           Int?
   images         images[]
   carts          carts[]
   categories     categories      @relation(fields: [category_id], references: [id])
@@ -62,7 +62,7 @@ model products {
 model images {
   id         Int      @id @default(autoincrement())
   url        String
-  is_main    Boolean @default(false)
+  is_main    Boolean  @default(false)
   product_id Int
   products   products @relation(fields: [product_id], references: [id])
 }
