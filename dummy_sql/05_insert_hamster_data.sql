@@ -1,4 +1,4 @@
-INSERT INTO products(kor_name, eng_name, price, category_id, subcategory_id, is_new, sale)
+INSERT INTO products(kor_name, eng_name, price, category_id, subcategory_id, is_new, sale_rate)
   VALUES
   ("햄스터 해먹 침대 ", "Hamster Bed Hanging Hammock House", 5000, 4, 3, true),
   ("햄스터 나무 장난감", "Hamster Natural Wooden Chew Toys", 15000, 4, 2, true),
