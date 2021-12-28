@@ -9,7 +9,7 @@ INSERT INTO subcategories(name, category_id)
 
     ("food", 2),
     ("toy", 2),
-    ("house", 2),ㅎ
+    ("house", 2),
     ("health", 2);
 
     ("food",3),
