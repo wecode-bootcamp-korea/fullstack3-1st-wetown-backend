@@ -62,6 +62,7 @@ model products {
 model images {
   id         Int      @id @default(autoincrement())
   url        String
+  is_main    Boolean @default(false)
   product_id Int
   products   products @relation(fields: [product_id], references: [id])
 }
