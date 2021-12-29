@@ -21,14 +21,23 @@ const signUp = async (
   const [user] = await userDao.getUserByEmail(email);
 
   if (user) {
-    throw (error = new Error('이미 가입된 이메일입니다'));
+    const error = new Error('이미 가입된 이메일입니다');
+
+    throw error;
   }
 
   const hashedPW = await makeHash(password);
 
   console.log('hashedPW', hashedPW);
 
-  await userDao.createUser(email, hashedPW);
+  await userDao.createUser(
+    name,
+    gender,
+    phone_number,
+    nickname,
+    hashedPW,
+    email
+  );
 };
 
 // 로그인

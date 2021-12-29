@@ -5,6 +5,6 @@ import userRouter from './userRouter';
 const router = express.Router();
 
 router.use('/category', prodctFilterRouter);
-router.use('/signUp', userRouter);
+router.use('/user', userRouter);
 
 export default router;
