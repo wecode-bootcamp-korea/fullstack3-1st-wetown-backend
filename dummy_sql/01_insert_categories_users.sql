@@ -9,5 +9,5 @@ VALUES
 ("food",5),("toy",5),("house",5),("health",5);
 
 INSERT INTO users(name, gender, phone_number, nickname, password, email) VALUES("관리자","중성","010-1234-5678","admin","1234","admin@wetown.com");
-W
+
 INSERT INTO policies(is_essential_agreed,is_optional_agreed,user_id) VALUES(true, true, 1);
