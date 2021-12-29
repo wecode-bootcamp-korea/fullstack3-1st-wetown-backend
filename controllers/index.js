@@ -1,3 +1,4 @@
 import productFilterController from './productFilterController';
+import userController from './userController';
 
-export { productFilterController };
+export { productFilterController, userController };
