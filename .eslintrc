@@ -8,5 +8,5 @@
     "dot-notation": "warn", // 가능하다면 dot notation 사용
     "no-unused-vars": "warn" // 사용하지 않는 변수 금지
   },
-  "parser": "babel-selint"
+  "parser": "babel-eslint"
 }
