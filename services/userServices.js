@@ -7,6 +7,11 @@ const makeHash = async password => {
   return await bcrypt.hash(password, 10);
 };
 
+const comparePW = async (password, hashedPW) => {
+  const isSame = await bcrypt.compare(password, hashedPW);
+  return isSame;
+};
+
 //회원가입
 const signUp = async (
   name,
@@ -41,6 +46,6 @@ const signUp = async (
 };
 
 // 로그인
-const signIn = async () => {};
+const signIn = async (email, password) => {};
 
 export default { signUp, signIn };
