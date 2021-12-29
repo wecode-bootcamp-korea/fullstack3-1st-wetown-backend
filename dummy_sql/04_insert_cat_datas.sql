@@ -1,9 +1,9 @@
-INSERT INTO products(kor_name, eng_name, price, category_id, subcategory_id,is_new, sale)
+INSERT INTO products(kor_name, eng_name, price, category_id, subcategory_id,is_new, sale_rate)
 VALUES
 ("고양이 퓨레 연어&비프","Cat Puree Salmon&Beef",14000,2,1,true,15),
 ("고양이 간식 참치","cat snack tuna fish",11000,2,1,false,5),
 ("고양이 수프 캔","Cat Soup Can",8000,2,1, true, 3),
-("탄성 고양이 스틱 깃털 플러시 공","Elastic Cat Sticks Feather Plush Ball",15000,2,2,false,0),
+("탄성 고양이 스틱 깃털 플러시 공","Elastic Cat Sticks Feather Plush Ball",15000,2,2,false,null),
 ("스크래치 패드 고양이 종이 긁는 장난감","scratch pads cat paper scratcher toy",13000,2,2,false,5),
 ("긁을수있는 고양이 집","Cat Scratcher House",35000,2,3,true,35),
 ("고양이 타워 콘도","Cat Tower Condo",55000,2,3,false,40),

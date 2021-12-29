@@ -1,15 +1,15 @@
-INSERT INTO products(kor_name, eng_name, price, category_id, subcategory_id,is_new, sale)
+INSERT INTO products(kor_name, eng_name, price, category_id, subcategory_id,is_new, sale_rate)
 VALUES
 ("비바람에 끄떡 없는 개집", "sturdy house", 48343, 1, 3, true, 35),
-("편안한 쿠션 집", "cozy cushion house", 32210, 1, 3, false),
-("접이식 쿠션 집", "foldable cushion house", 25000, 1, 3, false),
+("편안한 쿠션 집", "cozy cushion house", 32210, 1, 3, false, null),
+("접이식 쿠션 집", "foldable cushion house", 25000, 1, 3, false, null),
 ("영양 가득 중국산 개 사료", "High nutrition dog food made in China", 12200, 1, 1, true, 21),
 ("영양 높은 건식 개 사료", "Nutritional dry dog food", 16780, 1, 1, true, 17 ),
-("프리미엄 건식 개 사료", "Priminum dry dog food", 1290, 1, 1, false),
+("프리미엄 건식 개 사료", "Priminum dry dog food", 1290, 1, 1, false,null),
 ("삑삑이 강아지 장난감", "squeaky puppy toy", 1220, 1, 2, true, 11),
 ("강아지 점심모양 장난감", "Lunch set puppy toy", 67880, 1, 2, false, 89),
 ("개 목 보호대","dog neck protection",60900,1,4,true,20),
-("개 멀티비타민", "dog multivitamin", 432221, 1, 4, false)
+("개 멀티비타민", "dog multivitamin", 432221, 1, 4, false,null);
 
 
 
