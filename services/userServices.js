@@ -46,6 +46,34 @@ const signUp = async (
 };
 
 // 로그인
-const signIn = async (email, password) => {};
+const signIn = async (nickname, password) => {
+  console.log('id in services: ', nickname);
+
+  const [user] = await userDao.getUserByEmail(nickname);
+
+  if (!user) {
+    const error = new Error('INVALID_USER');
+    error.statusCode = 400;
+
+    throw error;
+  }
+
+  if (!comparePW) {
+    const error = new Error('INVALID_USER');
+    error.statusCode = 400;
+
+    throw error;
+  }
+
+  const token = jwt.sign({ id: user.id }, 'wetown123', {
+    expiresIn: '20m',
+  });
+
+  console.log('token :', token);
+
+  console.log(jwt.verify(token, 'wetown123'));
+
+  return token;
+};
 
 export default { signUp, signIn };
