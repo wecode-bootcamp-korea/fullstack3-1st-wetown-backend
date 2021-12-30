@@ -1,15 +1,10 @@
 import { userDao } from '../models';
 
-import bcrypt from 'bcryptjs';
+import bcrypt, { compare, compareSync } from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
 const makeHash = async password => {
   return await bcrypt.hash(password, 10);
-};
-
-const comparePW = async (password, hashedPW) => {
-  const isSame = await bcrypt.compare(password, hashedPW);
-  return isSame;
 };
 
 //회원가입
@@ -56,7 +51,8 @@ const signUp = async (
 const signIn = async (nickname, password) => {
   console.log('id in services: ', nickname);
 
-  const [user] = await userDao.getUserByEmail(nickname);
+  const [user] = await userDao.getUserByNickname(nickname);
+  const isSame = compareSync(password, user.password);
 
   if (!user) {
     const error = new Error('INVALID_USER');
@@ -65,7 +61,7 @@ const signIn = async (nickname, password) => {
     throw error;
   }
 
-  if (!comparePW) {
+  if (!isSame) {
     const error = new Error('INVALID_USER');
     error.statusCode = 400;
 

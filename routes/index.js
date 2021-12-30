@@ -1,6 +1,7 @@
 import express from 'express';
 import prodctFilterRouter from './productFilterRouter';
 import userRouter from './userRouter';
+// import { authentication } from '../middleWare/auth';
 
 const router = express.Router();
 
