@@ -2,6 +2,7 @@ import { userDao } from '../models';
 
 import bcrypt, { compare, compareSync } from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+require('dotenv').config();
 
 const makeHash = async password => {
   return await bcrypt.hash(password, 10);
@@ -68,7 +69,7 @@ const signIn = async (nickname, password) => {
     throw error;
   }
 
-  const token = jwt.sign({ id: user.id }, 'wetown123', {
+  const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
     expiresIn: '20m',
   });
 
