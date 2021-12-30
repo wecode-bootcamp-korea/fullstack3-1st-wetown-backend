@@ -2,10 +2,9 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-//장바구니로 이동 시 유저가 가지고 있는 데이터 return
+//장바구니 리스트 불러오는 request시 수행할 동작
 const allUserCart = async user_id => {
-  console.log('userCartDao : ', user_id);
-  const userCart = await prisma.$queryRaw`
+  const getAllUserCart = await prisma.$queryRaw`
     SELECT
       carts.id, 
       product_id, 
@@ -22,12 +21,12 @@ const allUserCart = async user_id => {
     WHERE
       user_id = ${user_id};
     `;
-  return userCart;
+  return getAllUserCart;
 };
 
-//유저가 장바구니에 담는 request 시에 create 수행
+//장바구니에 상품 추가 request시 수행할 동작
 const addUserCart = async REQUIRED_KEYS => {
-  const addCart = await prisma.$queryRaw`
+  const createToUserCart = await prisma.$queryRaw`
     INSERT INTO
       carts(
         product_id,
@@ -39,7 +38,33 @@ const addUserCart = async REQUIRED_KEYS => {
         ${REQUIRED_KEYS.user_id}
       );
   `;
-  return addCart;
+  return createToUserCart;
 };
 
-export default { allUserCart, addUserCart };
+//장바구니에 담긴 상품 삭제 request시 수행할 동작
+const delUserCart = async REQUIRED_KEYS => {
+  let delFromUserCart;
+  //null은 falsy한 값으로 !null === true
+  if (!REQUIRED_KEYS.cart_id) {
+    delFromUserCart = await prisma.$queryRaw`
+    DELETE FROM
+    carts
+    WHERE
+    user_id = ${REQUIRED_KEYS.user_id}
+    AND
+    product_id in (${[REQUIRED_KEYS.product_id]});
+    `;
+  } else {
+    //해당상품 갯수 1개씩 삭제 동작(cart_id === null)
+    delFromUserCart = await prisma.$queryRaw`
+      DELETE FROM
+        carts
+      WHERE
+        id = ${REQUIRED_KEYS.cart_id};
+    `;
+  }
+
+  return delFromUserCart;
+};
+
+export default { allUserCart, addUserCart, delUserCart };
