@@ -1,6 +1,6 @@
 import { userDao } from '../models';
 
-import bcrypt from 'bcryptjs'; // 단방향 암호화
+import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
 const makeHash = async password => {
@@ -23,10 +23,17 @@ const signUp = async (
 ) => {
   console.log('userService user:', name, phone_number, password);
 
-  const [user] = await userDao.getUserByEmail(email);
+  const [userEmail] = await userDao.getUserByEmail(email);
+  const [userNickname] = await userDao.getUserByNickname(nickname);
 
-  if (user) {
+  if (userEmail) {
     const error = new Error('이미 가입된 이메일입니다');
+
+    throw error;
+  }
+
+  if (userNickname) {
+    const error = new Error('이미 가입된 아이디입니다');
 
     throw error;
   }

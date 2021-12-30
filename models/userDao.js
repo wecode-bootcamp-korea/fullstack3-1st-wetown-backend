@@ -12,6 +12,16 @@ const getUserByEmail = async email => {
   return user;
 };
 
+// 아이디 불러오기
+const getUserByNickname = async nickname => {
+  console.log('nickname in model: ', nickname);
+  const user = await prisma.$queryRaw`
+      SELECT email, password FROM users WHERE nickname = ${nickname}
+    `;
+  console.log('user in model: ', user);
+  return user;
+};
+
 // 계정 생성
 const createUser = async (
   name,
@@ -28,4 +38,4 @@ const createUser = async (
   `;
 };
 
-export default { createUser, getUserByEmail };
+export default { createUser, getUserByEmail, getUserByNickname };
