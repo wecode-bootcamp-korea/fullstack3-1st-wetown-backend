@@ -18,7 +18,7 @@ const signUp = async (req, res) => {
         res.send(400).json({ message: 'INVALID USER' });
       }
     }
-    console.log('signUp controller', REQUIRED_KEYS);
+
     await userServices.signUp(
       name,
       gender,
@@ -38,13 +38,12 @@ const signIn = async (req, res) => {
   try {
     const { nickname, password } = req.body;
     const REQUIRED_KEYS = { nickname, password };
-    console.log('userController', nickname);
+
     for (let key in REQUIRED_KEYS) {
       if (!REQUIRED_KEYS[key]) {
         return res.status(400).json({ message: `KEY_ERROR` });
       }
     }
-    console.log('id in controller: ', nickname);
     const [user] = await userDao.getUserByNickname(nickname);
 
     const token = await userServices.signIn(nickname, password);

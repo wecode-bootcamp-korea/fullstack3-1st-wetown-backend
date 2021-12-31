@@ -1,6 +1,6 @@
 import { userDao } from '../models';
 
-import bcrypt, { compare, compareSync } from 'bcryptjs';
+import bcrypt, { compareSync } from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 require('dotenv').config();
 
@@ -17,8 +17,6 @@ const signUp = async (
   password,
   email
 ) => {
-  console.log('userService user:', name, phone_number, password);
-
   const [userEmail] = await userDao.getUserByEmail(email);
   const [userNickname] = await userDao.getUserByNickname(nickname);
 
@@ -35,8 +33,6 @@ const signUp = async (
   }
 
   const hashedPW = await makeHash(password);
-
-  console.log('hashedPW', hashedPW);
 
   await userDao.createUser(
     name,
@@ -72,10 +68,6 @@ const signIn = async (nickname, password) => {
   const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
     expiresIn: '20m',
   });
-
-  console.log('token :', token);
-
-  console.log(jwt.verify(token, 'wetown123'));
 
   return token;
 };

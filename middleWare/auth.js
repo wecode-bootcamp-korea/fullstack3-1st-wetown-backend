@@ -4,10 +4,10 @@ import verifyToken from './token';
 const authentication = (req, res, next) => {
   const token = req.cookies.user; // token가져오기
 
-  const vaildToken = verifyToken(token);
+  const validToken = verifyToken(token);
 
-  if (vaildToken) {
-    req.userId = vaildToken.id;
+  if (validToken) {
+    req.userId = validToken.id;
     next();
   } else {
     res.status(400).send('토큰이 유효하지 않습니다.');
