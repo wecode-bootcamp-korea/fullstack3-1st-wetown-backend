@@ -36,17 +36,17 @@ const signUp = async (req, res) => {
 // 로그인
 const signIn = async (req, res) => {
   try {
-    const { nickname, password } = req.body;
-    const REQUIRED_KEYS = { nickname, password };
+    const { email, password } = req.body;
+    const REQUIRED_KEYS = { email, password };
 
     for (let key in REQUIRED_KEYS) {
       if (!REQUIRED_KEYS[key]) {
         return res.status(400).json({ message: `KEY_ERROR` });
       }
     }
-    const [user] = await userDao.getUserByNickname(nickname);
+    const [user] = await userDao.getUserByEmail(email);
 
-    const token = await userServices.signIn(nickname, password);
+    const token = await userServices.signIn(email, password);
 
     user.token = token;
 

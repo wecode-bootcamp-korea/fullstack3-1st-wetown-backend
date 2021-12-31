@@ -20,16 +20,9 @@ const signUp = async (
   email
 ) => {
   const [userEmail] = await userDao.getUserByEmail(email);
-  const [userNickname] = await userDao.getUserByNickname(nickname);
 
   if (userEmail) {
     const error = new Error('이미 가입된 이메일입니다');
-
-    throw error;
-  }
-
-  if (userNickname) {
-    const error = new Error('이미 가입된 아이디입니다');
 
     throw error;
   }
@@ -47,10 +40,8 @@ const signUp = async (
 };
 
 // 로그인
-const signIn = async (nickname, password) => {
-  console.log('id in services: ', nickname);
-
-  const [user] = await userDao.getUserByNickname(nickname);
+const signIn = async (email, password) => {
+  const [user] = await userDao.getUserByEmail(email);
   const isSame = compareSync(password, user.password);
 
   if (!user) {
