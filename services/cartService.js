@@ -3,14 +3,14 @@ import userCartDao from '../models/userCartDao';
 const errStatusCode = 400;
 
 const getUserCart = async user_id => {
-  const userCart = await userCartDao.allUserCart(user_id);
+  const userCart = await userCartDao.getCartItem(user_id);
   //카트에 담긴게 없는 경우 null을 리턴
   if (!userCart) return null;
   return userCart;
 };
 
-const addToCart = async REQUIRED_KEYS => {
-  const addCart = await userCartDao.addUserCart(REQUIRED_KEYS);
+const addToCart = async (user_id, product_id) => {
+  const addCart = await userCartDao.createCartItem(user_id, product_id);
   //카트에 create 성공시 빈 배열 반환되므로 true 값을 return 하여 성공 여부 알려주기
   if (addCart) {
     return true;
@@ -23,8 +23,8 @@ const addToCart = async REQUIRED_KEYS => {
   }
 };
 
-const delFromCart = async REQUIRED_KEYS => {
-  const delCart = await userCartDao.delUserCart(REQUIRED_KEYS);
+const delFromCart = async (user_id, product_id) => {
+  const delCart = await userCartDao.deleteCartItem(user_id, product_id);
   //카트에 담긴 상품 delete 성공시 빈 배열 반환되므로 true 값을 return 하여 성공 여부 알려주기
   if (delCart) {
     return true;

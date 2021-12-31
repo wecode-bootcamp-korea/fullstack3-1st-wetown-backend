@@ -1,12 +1,16 @@
-import userCartService from '../services/userCartService';
+import cartService from '../services/cartService';
 
 //유저가 담은 카트 상품 정보들
 const getUserCart = async (req, res) => {
   try {
     const { user_id } = req.params;
+    //middleware통과 후, token에서 받은 유저 정보를 사용하기
     console.log('userCartController : ', user_id);
-    const userCart = await userCartService.getUserCart(user_id);
-    return res.status(200).send(userCart);
+    const userCart = await cartService.getUserCart(user_id);
+    return res.status(200).send({
+      message: 'get user cart success!!',
+      result: userCart,
+    });
   } catch (err) {
     //error handling
     console.log(err);
@@ -26,8 +30,9 @@ const addToCart = async (req, res) => {
         });
       }
     }
-    const addCart = await userCartService.addToCart(REQUIRED_KEYS);
+    const addCart = await cartService.addToCart(user_id, product_id);
     return res.status(201).send({
+      message: 'create cart item success!!',
       result: addCart,
     });
   } catch (err) {
@@ -51,8 +56,9 @@ const delFromCart = async (req, res) => {
         });
       }
     }
-    const delCart = userCartService.delFromCart(REQUIRED_KEYS);
-    return res.status(200).send({
+    const delCart = cartService.delFromCart(user_id, product_id);
+    return res.status(204).send({
+      message: 'delete cart item success!!',
       result: delCart,
     });
   } catch (err) {
