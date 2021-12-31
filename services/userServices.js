@@ -2,7 +2,8 @@ import { userDao } from '../models';
 
 import bcrypt, { compareSync } from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 
 const makeHash = async password => {
   return await bcrypt.hash(password, 10);
