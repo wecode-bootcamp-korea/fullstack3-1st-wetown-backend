@@ -27,7 +27,9 @@ const addToCart = async (req, res) => {
       }
     }
     const addCart = await userCartService.addToCart(REQUIRED_KEYS);
-    return res.status(201).send(addCart);
+    return res.status(201).send({
+      result: addCart,
+    });
   } catch (err) {
     //error handling
     console.log(err);
@@ -39,8 +41,8 @@ const addToCart = async (req, res) => {
 const delFromCart = async (req, res) => {
   try {
     //해당상품 일괄 삭제
-    const { cart_id, user_id, product_id } = req.body;
-    const REQUIRED_KEYS = { cart_id, user_id, product_id };
+    const { user_id, product_id } = req.body;
+    const REQUIRED_KEYS = { user_id, product_id };
 
     for (let key in REQUIRED_KEYS) {
       if (!REQUIRED_KEYS[key]) {
@@ -50,7 +52,9 @@ const delFromCart = async (req, res) => {
       }
     }
     const delCart = userCartService.delFromCart(REQUIRED_KEYS);
-    return res.status(200).send({ delCart });
+    return res.status(200).send({
+      result: delCart,
+    });
   } catch (err) {
     //error handling
     console.log(err);

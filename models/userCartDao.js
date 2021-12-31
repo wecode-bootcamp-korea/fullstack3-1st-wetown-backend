@@ -44,23 +44,29 @@ const addUserCart = async REQUIRED_KEYS => {
 //장바구니에 담긴 상품 삭제 request시 수행할 동작
 const delUserCart = async REQUIRED_KEYS => {
   let delFromUserCart;
-  //null은 falsy한 값으로 !null === true
-  if (!REQUIRED_KEYS.cart_id) {
+  const [product_id] = REQUIRED_KEYS.product_id;
+  console.log(product_id);
+  //여러 상품 일괄 삭제 동작
+  if (!REQUIRED_KEYS.product_id.length > 1) {
     delFromUserCart = await prisma.$queryRaw`
     DELETE FROM
-    carts
+      carts
     WHERE
-    user_id = ${REQUIRED_KEYS.user_id}
+      user_id = ${REQUIRED_KEYS.user_id}
     AND
-    product_id in (${[REQUIRED_KEYS.product_id]});
+      product_id in (${[REQUIRED_KEYS.product_id]});
     `;
   } else {
-    //해당상품 갯수 1개씩 삭제 동작(cart_id === null)
+    //해당상품 갯수 1개씩 삭제 동작
     delFromUserCart = await prisma.$queryRaw`
       DELETE FROM
         carts
       WHERE
-        id = ${REQUIRED_KEYS.cart_id};
+        user_id = ${REQUIRED_KEYS.user_id},
+      AND
+        product_id = ${[REQUIRED_KEYS.product_id]}
+      LIMIT
+        1;
     `;
   }
 

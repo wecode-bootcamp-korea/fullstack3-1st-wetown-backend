@@ -25,7 +25,6 @@ const addToCart = async REQUIRED_KEYS => {
 
 const delFromCart = async REQUIRED_KEYS => {
   const delCart = await userCartDao.delUserCart(REQUIRED_KEYS);
-  console.log('###CARTSERVICE DELETE: ', delCart);
   //카트에 담긴 상품 delete 성공시 빈 배열 반환되므로 true 값을 return 하여 성공 여부 알려주기
   if (delCart) {
     return true;
