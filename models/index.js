@@ -1,4 +1,4 @@
+import productFilterDao from './productFilterDao';
 import userDao from './userDao';
-import productDao from './productDao';
 
-export { userDao, productDao };
+export { productFilterDao, userDao };

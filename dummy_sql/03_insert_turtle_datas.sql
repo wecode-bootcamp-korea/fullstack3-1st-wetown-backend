@@ -7,7 +7,7 @@ INSERT INTO
     category_id,
     subcategory_id,
     is_new,
-    sale
+    sale_rate
   ) VALUES (
     "파충류 성장 빛",
     "EDJ T5 Light",
@@ -224,7 +224,7 @@ INSERT INTO
   ), (
     "https://sc04.alicdn.com/kf/UT8Q5uhXEXXXXagOFbX5.jpg_50x50.jpg",
     30
-  ) (
+  ), (
     "https://sc04.alicdn.com/kf/UT8099hXz0XXXagOFbXY.jpg",
     30
   );

@@ -1,4 +1,4 @@
+import productFilterServices from './productFilterServices';
 import userServices from './userServices';
-import productServices from './productServices';
 
-export { userServices, productServices };
+export { productFilterServices, userServices };
