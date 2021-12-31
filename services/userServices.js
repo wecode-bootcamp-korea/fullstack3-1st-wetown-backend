@@ -5,6 +5,7 @@ import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 dotenv.config();
 
+//비밀번호 암호화
 const makeHash = async password => {
   return await bcrypt.hash(password, 10);
 };
