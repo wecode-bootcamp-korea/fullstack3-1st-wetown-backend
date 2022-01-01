@@ -38,12 +38,12 @@ const createCart = async (user_id, product_id, cart_quantity) => {
 };
 
 const updateCart = async (user_id, product_id, cart_quantity) => {
-  const updateQuantity = await cartDao.updateItemQuantity(
+  const [updateQuantity] = await cartDao.updateItemQuantity(
     user_id,
     product_id,
     cart_quantity
   );
-  if (updateQuantity) {
+  if (!updateQuantity) {
     return true;
   } else {
     const error = new Error('상품이 업데이트되지 않았습니다.');

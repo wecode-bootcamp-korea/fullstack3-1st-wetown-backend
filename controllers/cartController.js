@@ -71,7 +71,7 @@ const updateCart = async (req, res) => {
   try {
     const { user_id } = req.params;
     const { product_id, cart_quantity } = req.body;
-    const updateQuantity = cartService.updateCart(
+    const updateQuantity = await cartService.updateCart(
       user_id,
       product_id,
       cart_quantity
