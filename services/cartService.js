@@ -1,32 +1,61 @@
-import userCartDao from '../models/userCartDao';
+import cartDao from '../models/cartDao';
 
 const errStatusCode = 400;
 
-const getUserCart = async user_id => {
-  const userCart = await userCartDao.getCartItem(user_id);
+const cartList = async user_id => {
+  const getCartList = await cartDao.getCartItem(user_id);
   //카트에 담긴게 없는 경우 null을 리턴
-  if (!userCart) return null;
-  return userCart;
+  if (getCartList.length < 1) return null;
+  return getCartList;
 };
 
-const addToCart = async (user_id, product_id) => {
-  const addCart = await userCartDao.createCartItem(user_id, product_id);
-  //카트에 create 성공시 빈 배열 반환되므로 true 값을 return 하여 성공 여부 알려주기
-  if (addCart) {
-    return true;
+const createCart = async (user_id, product_id, cart_quantity) => {
+  //장바구니에 해당상품 존재 여부 check
+  const [checkItem] = await cartDao.checkCartItem(user_id, product_id);
+  switch (checkItem.exist) {
+    //장바구니에 해당 상품 없을 경우
+    case 0:
+      const addCart = await cartDao.createCartItem(
+        user_id,
+        product_id,
+        cart_quantity
+      );
+      //카트에 create 성공시 빈 배열 반환되므로 truthy 값 1을 return 하여 성공 여부 알려주기
+      if (addCart) {
+        return 1;
+      }
+      //제대로 create 되지 않았을 경우 에러발생
+      else {
+        const error = new Error('상품이 담기지 않았습니다.');
+        error.statusCode = errStatusCode;
+        throw error;
+      }
+    //장바구니에 해당상품 있을 경우 update 함수 실행
+    case 1:
+      const result = updateCart(user_id, product_id, cart_quantity);
+      return result;
   }
-  //제대로 create 되지 않았을 경우 에러발생
-  else {
-    const error = new Error('상품이 담기지 않았습니다.');
+};
+
+const updateCart = async (user_id, product_id, cart_quantity) => {
+  const updateQuantity = await cartDao.updateItemQuantity(
+    user_id,
+    product_id,
+    cart_quantity
+  );
+  if (updateQuantity) {
+    return true;
+  } else {
+    const error = new Error('상품이 업데이트되지 않았습니다.');
     error.statusCode = errStatusCode;
     throw error;
   }
 };
 
-const delFromCart = async (user_id, product_id) => {
-  const delCart = await userCartDao.deleteCartItem(user_id, product_id);
+const deleteCart = async (user_id, product_id) => {
+  const deleteItem = await cartDao.deleteCartItem(user_id, product_id);
   //카트에 담긴 상품 delete 성공시 빈 배열 반환되므로 true 값을 return 하여 성공 여부 알려주기
-  if (delCart) {
+  if (deleteItem) {
     return true;
   }
   //delete 되지 않았을 경우 에러발생
@@ -36,4 +65,9 @@ const delFromCart = async (user_id, product_id) => {
     throw error;
   }
 };
-export default { getUserCart, addToCart, delFromCart };
+export default {
+  cartList,
+  createCart,
+  updateCart,
+  deleteCart,
+};
