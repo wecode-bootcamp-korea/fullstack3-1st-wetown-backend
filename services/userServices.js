@@ -1,5 +1,4 @@
 import { userDao } from '../models';
-
 import bcrypt, { compareSync } from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';

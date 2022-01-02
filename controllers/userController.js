@@ -1,5 +1,4 @@
 import { userServices } from '../services';
-import { userDao } from '../models';
 
 //회원가입
 const signUp = async (req, res) => {
@@ -44,21 +43,18 @@ const signIn = async (req, res) => {
         return res.status(400).json({ message: `KEY_ERROR` });
       }
     }
-    const [user] = await userDao.getUserByEmail(email);
 
     const token = await userServices.signIn(email, password);
-
-    user.token = token;
 
     console.log('user in controller: ', token);
 
     return res
-      .cookie('user', user.token, {
+      .cookie('user', token, {
         maxAge: 1000 * 60 * 20,
         httpOnly: true,
       })
       .status(200)
-      .json({ message: 'LOGIN_SUCCESS', loginSuccess: true, userId: user.id });
+      .json({ message: 'LOGIN_SUCCESS', loginSuccess: true });
   } catch (err) {
     console.log(err);
     return res.status(err.statusCode || 500).json({ message: err.message });
