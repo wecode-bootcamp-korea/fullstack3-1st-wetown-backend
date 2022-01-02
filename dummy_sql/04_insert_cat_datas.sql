@@ -9,7 +9,7 @@ VALUES
 ("고양이 타워 콘도","Cat Tower Condo",55000,2,3,false,40),
 ("고양이 화장실 쓰레기 삽 튀김 방지 타원형","Cat Toilet send litter shovel splash proof",25000,2,4,false,10),
 ("고양이 손톱 발가락 발톱 가위","Cat Nail Toe Claw Clippers Scissors",6000,2,4,false,5),
-("고양이 그루밍 도구 제품","DIVTOP Grooming Tools Product for cat",4000,2,4,false,10)
+("고양이 그루밍 도구 제품","DIVTOP Grooming Tools Product for cat",4000,2,4,false,10);
 
 
 
@@ -24,7 +24,7 @@ VALUES
 ("https://s.alicdn.com/@sc04/kf/HTB1dwySefDH8KJjy1Xcq6ApdXXaP.jpg_300x300.jpg",true,17),
 ("https://sc04.alicdn.com/kf/Hb50f98e6aa3e46798abcfc8e42f1aea28.jpg_50x50.jpg",true,18),
 ("https://sc04.alicdn.com/kf/H327bade3fa634f1c9c1cbd5b4b8b613eD.jpg_50x50.jpg",true,19),
-("https://sc04.alicdn.com/kf/H98a13f6b206843ebbf3f867da5cba7fbp.jpg_50x50.jpg",true,20)
+("https://sc04.alicdn.com/kf/H98a13f6b206843ebbf3f867da5cba7fbp.jpg_50x50.jpg",true,20);
 
 
 INSERT INTO images(url, is_main,product_id)
@@ -59,4 +59,4 @@ VALUES
 ("https://sc04.alicdn.com/kf/Hde3fa5b19d134ab49d60ede5c9e74ae88.jpg_100x100.jpg",false,19),
 ("https://sc04.alicdn.com/kf/H4f9ff41927ee49c19d3d37786d32b98cQ.jpg_50x50.jpg",false,20),
 ("https://sc04.alicdn.com/kf/H2d397679379c477b98e76940acd5a199K.jpg_50x50.jpg",false,20),
-("https://sc04.alicdn.com/kf/Ha1c42081aca44526b5f21e1fba5131a3n.jpg_100x100.jpg",false,20)
+("https://sc04.alicdn.com/kf/Ha1c42081aca44526b5f21e1fba5131a3n.jpg_100x100.jpg",false,20);
