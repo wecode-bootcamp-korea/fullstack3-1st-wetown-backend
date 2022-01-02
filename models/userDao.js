@@ -20,8 +20,21 @@ const createUser = async (
   email
 ) => {
   await prisma.$queryRaw`
-  INSERT INTO users(name, gender, phone_number, nickname, password, email) 
-  VALUES(${name}, ${gender}, ${phone_number}, ${nickname}, ${password}, ${email});
+  INSERT INTO 
+  users(
+    name, 
+    gender, 
+    phone_number, 
+    nickname, 
+    password, 
+    email) 
+  VALUES(
+    ${name}, 
+    ${gender}, 
+    ${phone_number}, 
+    ${nickname}, 
+    ${password}, 
+    ${email});
   `;
 };
 
