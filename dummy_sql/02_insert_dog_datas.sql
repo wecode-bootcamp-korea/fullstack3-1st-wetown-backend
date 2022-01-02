@@ -24,7 +24,7 @@ VALUES
 ("https://sc04.alicdn.com/kf/H3018792b9a574ce3b3062089e00dde1cz.jpg",true, 7),
 ("https://sc04.alicdn.com/kf/Hef4335f07c344c458e13f718d17caa55v.jpg",true, 8),
 ("https://sc04.alicdn.com/kf/Ha710205e8d664567b52d6801648512791.png", true, 9),
-("https://sc04.alicdn.com/kf/Hf79c53f729c2483a81f57d81544384dbj.jpg",true,10)
+("https://sc04.alicdn.com/kf/Hf79c53f729c2483a81f57d81544384dbj.jpg",true,10);
 
 INSERT INTO images(url, product_id)
 VALUES
@@ -58,4 +58,4 @@ VALUES
 ("https://sc04.alicdn.com/kf/Hd981efca5f734939bc182bf17ad001bdV.png", 9),
 ("https://sc04.alicdn.com/kf/H1a13d0f9a6bc4f7d883971b58a8f6d528.jpg",10),
 ("https://sc04.alicdn.com/kf/H85ac25fdbec5460690c15d11182ada21Z.jpg", 10),
-("https://sc04.alicdn.com/kf/Hcfced8b631824c72a66d27c337cb7dd8Z.jpg", 10)
+("https://sc04.alicdn.com/kf/Hcfced8b631824c72a66d27c337cb7dd8Z.jpg", 10);
