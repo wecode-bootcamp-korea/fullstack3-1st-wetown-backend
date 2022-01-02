@@ -1,11 +1,13 @@
 import express from 'express';
 import routes from './routes';
+import cookieParser from 'cookie-parser';
 
 const app = express();
 const PORT = 8000;
 
 app.use(express.json());
 app.use(routes);
+app.use(cookieParser());
 
 const start = async () => {
   try {

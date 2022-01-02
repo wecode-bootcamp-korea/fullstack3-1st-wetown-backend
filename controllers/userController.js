@@ -17,7 +17,7 @@ const signUp = async (req, res) => {
         res.send(400).json({ message: 'INVALID USER' });
       }
     }
-    console.log('signUp controller', REQUIRED_KEYS);
+
     await userServices.signUp(
       name,
       gender,
@@ -31,7 +31,34 @@ const signUp = async (req, res) => {
     return res.status(500).json({ message: err.message });
   }
 };
+
 // 로그인
-const signIn = async () => {};
+const signIn = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const REQUIRED_KEYS = { email, password };
+
+    for (let key in REQUIRED_KEYS) {
+      if (!REQUIRED_KEYS[key]) {
+        return res.status(400).json({ message: `KEY_ERROR` });
+      }
+    }
+
+    const token = await userServices.signIn(email, password);
+
+    console.log('user in controller: ', token);
+
+    return res
+      .cookie('user', token, {
+        maxAge: 1000 * 60 * 20,
+        httpOnly: true,
+      })
+      .status(200)
+      .json({ message: 'LOGIN_SUCCESS' });
+  } catch (err) {
+    console.log(err);
+    return res.status(err.statusCode || 500).json({ message: err.message });
+  }
+};
 
 export default { signUp, signIn };
