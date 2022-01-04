@@ -1,4 +1,3 @@
-import verifyToken from './token';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 dotenv.config();
@@ -27,4 +26,4 @@ const verifyToken = token => {
   }
 };
 
-export default { authentication, verifyToken };
+export default { authentication };
