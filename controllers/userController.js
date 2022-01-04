@@ -46,8 +46,6 @@ const signIn = async (req, res) => {
 
     const token = await userServices.signIn(email, password);
 
-    console.log('user in controller: ', token);
-
     return res
       .cookie('user', token, {
         maxAge: 1000 * 60 * 20,
