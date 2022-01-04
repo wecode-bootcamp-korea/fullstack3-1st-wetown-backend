@@ -1,4 +1,4 @@
-import cartDao from '../models';
+import { cartDao } from '../models';
 
 const errStatusCode = 400;
 
