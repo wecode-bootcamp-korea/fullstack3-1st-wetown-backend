@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 // 이메일 불러오기
 const getUserByEmail = async email => {
   const user = await prisma.$queryRaw`
-      SELECT email, password FROM users WHERE email = ${email}
+      SELECT id, email, password FROM users WHERE email = ${email}
     `;
   return user;
 };
