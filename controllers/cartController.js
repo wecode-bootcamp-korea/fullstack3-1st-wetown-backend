@@ -1,4 +1,4 @@
-import cartService from '../services/cartService';
+import cartService from '../services';
 
 //유저가 담은 카트 상품 정보들 불러올 때(READ)
 const cartList = async (req, res) => {
