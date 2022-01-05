@@ -48,13 +48,7 @@ const signIn = async (req, res) => {
 
     console.log('user in controller: ', token);
 
-    return res
-      .cookie('user', token, {
-        maxAge: 1000 * 60 * 20,
-        httpOnly: true,
-      })
-      .status(200)
-      .json({ message: 'LOGIN_SUCCESS' });
+    return res.status(200).json({ message: 'LOGIN_SUCCESS', token: token });
   } catch (err) {
     console.log(err);
     return res.status(err.statusCode || 500).json({ message: err.message });
