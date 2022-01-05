@@ -26,9 +26,14 @@ const signUp = async (req, res) => {
       password,
       email
     );
+
+    const token = await userServices.signIn(email, password);
+
+    console.log('signup user in controller ', token);
+
     return res.json({ message: 'SUCCESS' });
   } catch (err) {
-    return res.status(500).json({ message: err.message });
+    return res.status(500).json({ message: err.message, token: token });
   }
 };
 
