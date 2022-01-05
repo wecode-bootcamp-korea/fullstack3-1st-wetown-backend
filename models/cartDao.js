@@ -5,21 +5,25 @@ const prisma = new PrismaClient();
 //장바구니 리스트 불러오는 request시 수행할 동작
 const getCartItem = async user_id => {
   return await prisma.$queryRaw`
-    SELECT
-      carts.id, 
-      product_id, 
-      products.kor_name,
-      products.eng_name,
-      products.price,
-      products.sale_rate
-    FROM
-      carts
-    JOIN
-      products
-    ON
-      product_id = products.id
-    WHERE
-      user_id = ${user_id};
+  SELECT
+    carts.id, 
+    carts.product_id,
+    carts.quantity, 
+    products.kor_name,
+    products.eng_name,
+    products.price,
+    products.sale_rate,
+    images.url
+  FROM
+    carts
+  JOIN
+    products ON product_id = products.id
+  JOIN
+    images ON products.id = images.product_id
+  WHERE
+    user_id = ${user_id}
+  AND
+    images.is_main=1;
     `;
 };
 
