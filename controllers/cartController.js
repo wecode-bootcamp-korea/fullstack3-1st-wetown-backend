@@ -3,8 +3,8 @@ import { cartService } from '../services';
 //유저가 담은 카트 상품 정보들 불러올 때(READ)
 const cartList = async (req, res) => {
   try {
-    const user_id = req.userId;
-
+    // const user_id = req.userId;
+    const { user_id } = req.body;
     //middleware통과 후, token에서 받은 유저 정보를 사용하기
     const getCartList = await cartService.cartList(user_id);
     if (!getCartList) {
@@ -27,8 +27,9 @@ const cartList = async (req, res) => {
 //상품을 카트에 담을 때(CREATE)
 const createCart = async (req, res) => {
   try {
-    const user_id = req.userId;
-    const { product_id, cart_quantity } = req.body;
+    //middleware 로 user_id 받아오기
+    // const user_id = req.userId;
+    const { user_id, product_id, cart_quantity } = req.body;
     const REQUIRED_KEYS = { user_id, product_id, cart_quantity };
 
     let success_msg = '';
@@ -71,8 +72,9 @@ const createCart = async (req, res) => {
 //장바구니에 담긴 상품 갯수 변경(UPDATE)
 const updateCart = async (req, res) => {
   try {
-    const user_id = req.userId;
-    const { product_id, cart_quantity } = req.body;
+    //middleware 로 user_id 받아오기
+    // const user_id = req.userId;
+    const { user_id, product_id, cart_quantity } = req.body;
     const updateQuantity = await cartService.updateCart(
       user_id,
       product_id,
@@ -92,9 +94,9 @@ const updateCart = async (req, res) => {
 //장바구니에 담긴 상품을 삭제할 때(DELETE)
 const deleteCart = async (req, res) => {
   try {
-    //해당상품 일괄 삭제
-    const user_id = req.userId;
-    const { product_id } = req.body;
+    //middleware 로 user_id 받아오기
+    // const user_id = req.userId;
+    const { user_id, product_id } = req.body;
     const REQUIRED_KEYS = { user_id, product_id };
 
     for (let key in REQUIRED_KEYS) {
