@@ -41,21 +41,30 @@ const signUp = async (
 // 로그인
 const signIn = async (email, password) => {
   const [user] = await userDao.getUserByEmail(email);
-  const isSame = compareSync(password, user.password);
+  let isSame;
+  let error;
 
-  if (!user) {
-    const error = new Error('INVALID_USER');
+  // user가 존재하면 입력받은 password 가 일치 하는지 확인 후
+  // 존재 하지 않으면 에러를 던져준다
+  if (user) {
+    isSame = compareSync(password, user.password);
+  } else if (!user) {
+    error = new Error('INVALID_USER');
     error.statusCode = 400;
 
     throw error;
   }
 
+  // user가 존재해서 password 가 일치 하는지 확인 후
+  // 일치 하지 않아서 에러를 던져준다
   if (!isSame) {
-    const error = new Error('INVALID_USER');
+    error = new Error('INVALID_USER');
     error.statusCode = 400;
 
     throw error;
   }
+
+  // password가 db에 있는 비밀번호와 같아서 여기까지 온다면, 토큰을 발행하고 토큰을 반환해준다
 
   const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
     expiresIn: '20m',
