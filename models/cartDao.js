@@ -13,6 +13,7 @@ const getCartItem = async user_id => {
     products.eng_name,
     products.price,
     products.sale_rate,
+    categories.name as cate_name,
     images.url
   FROM
     carts
@@ -20,6 +21,8 @@ const getCartItem = async user_id => {
     products ON product_id = products.id
   JOIN
     images ON products.id = images.product_id
+  JOIN
+    categories ON category_id = categories.id
   WHERE
     user_id = ${user_id}
   AND
