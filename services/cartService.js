@@ -5,7 +5,7 @@ const errStatusCode = 400;
 const cartList = async user_id => {
   const getCartList = await cartDao.getCartItem(user_id);
   //카트에 담긴게 없는 경우 null을 리턴
-  if (getCartList.length < 1) return null;
+  if (getCartList.length < 1) return getCartList;
   return getCartList;
 };
 
