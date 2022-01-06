@@ -53,6 +53,9 @@ const signIn = async (req, res) => {
       })
       .status(200)
       .json({ message: 'LOGIN_SUCCESS' });
+    // console.log('user in controller: ', token);
+
+    // return res.status(200).json({ message: 'LOGIN_SUCCESS', token: token });
   } catch (err) {
     console.log(err);
     return res.status(err.statusCode || 500).json({ message: err.message });
