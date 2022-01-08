@@ -35,6 +35,7 @@ model policies {
 model categories {
   id            Int             @id @default(autoincrement())
   name          String
+  color         String?
   products      products[]
   subcategories subcategories[]
 }
