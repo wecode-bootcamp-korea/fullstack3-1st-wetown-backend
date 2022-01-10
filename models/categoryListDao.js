@@ -5,8 +5,7 @@ const prisma = new PrismaClient();
 const getCategoryList = async () => {
   const categories = await prisma.$queryRaw`
     SELECT
-      name,
-      color
+      name
     FROM
     categories`;
   console.log('dao---', categories);
