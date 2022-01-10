@@ -5,6 +5,7 @@ const prisma = new PrismaClient();
 const getCategoryList = async () => {
   const categories = await prisma.$queryRaw`
     SELECT
+      id,
       name
     FROM
     categories`;
