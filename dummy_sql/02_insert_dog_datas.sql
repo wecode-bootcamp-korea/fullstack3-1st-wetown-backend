@@ -15,16 +15,16 @@ VALUES
 
 INSERT INTO images(url, is_main,product_id) 
 VALUES
-("images/productListMain/dog/dog_house_01.png", true, 1),
-("images/productListMain/dog/dog_house_02.png", true, 2), 
-("images/productListMain/dog/dog_house_03.png", true,3),
-("images/productListMain/dog/dog_food_01.png", true, 4),
-("images/productListMain/dog/dog_food_02.png", true, 5),
-("images/productListMain/dog/dog_food_03.png", true, 6),
-("images/productListMain/dog/dog_toy_squeeky.png", true, 7),
-("images/productListMain/dog/dog_toy_lunch.png", true, 8),
-("images/productListMain/dog/dog_toy_flower.png", true, 9),
-("images/productListMain/dog/dog_health_01.png", true,10);
+("/images/productListMain/dog/dog_house_01.png", true, 1),
+("/images/productListMain/dog/dog_house_02.png", true, 2), 
+("/images/productListMain/dog/dog_house_03.png", true,3),
+("/images/productListMain/dog/dog_food_01.png", true, 4),
+("/images/productListMain/dog/dog_food_02.png", true, 5),
+("/images/productListMain/dog/dog_food_03.png", true, 6),
+("/images/productListMain/dog/dog_toy_squeeky.png", true, 7),
+("/images/productListMain/dog/dog_toy_lunch.png", true, 8),
+("/images/productListMain/dog/dog_toy_flower.png", true, 9),
+("/images/productListMain/dog/dog_health_01.png", true,10);
 
 INSERT INTO images(url, product_id)
 VALUES

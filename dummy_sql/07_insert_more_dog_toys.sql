@@ -12,14 +12,14 @@ VALUES
 
 INSERT INTO images(url, is_main,product_id) 
 VALUES
-("images/productListMain/dog/dog_toy_51.png", true, 51),
-("images/productListMain/dog/dog_toy_52.png", true, 52), 
-("images/productListMain/dog/dog_toy_53.png", true, 53),
-("images/productListMain/dog/dog_toy_54.png", true, 54),
-("images/productListMain/dog/dog_toy_55.png", true, 55),
-("images/productListMain/dog/dog_toy_56.png", true, 56),
-("images/productListMain/dog/dog_house_57.png", true, 57),
-("images/productListMain/dog/dog_house_58.png", true, 58),
+("/images/productListMain/dog/dog_toy_51.png", true, 51),
+("/images/productListMain/dog/dog_toy_52.png", true, 52), 
+("/images/productListMain/dog/dog_toy_53.png", true, 53),
+("/images/productListMain/dog/dog_toy_54.png", true, 54),
+("/images/productListMain/dog/dog_toy_55.png", true, 55),
+("/images/productListMain/dog/dog_toy_56.png", true, 56),
+("/images/productListMain/dog/dog_house_57.png", true, 57),
+("/images/productListMain/dog/dog_house_58.png", true, 58),
 
 
 -- 여기서는 그냥 기존 dog data 복붙입니다 따라서 위에 메인 이미지와 일치 하지 않습니다.
