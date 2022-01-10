@@ -1,5 +1,5 @@
 INSERT INTO categories(name, color) VALUES
-("dog", "#fccf1d"),("cat", "#c81a20"),("turtle", "#016ad5"),("hamster", "#cda5e0"),("bird","#d8e22d");
+("dog"),("cat"),("turtle"),("hamster"),("bird");
 
 INSERT INTO subcategories(name,category_id)
 VALUES
