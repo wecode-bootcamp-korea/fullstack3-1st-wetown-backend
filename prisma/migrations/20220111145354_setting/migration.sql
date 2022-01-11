@@ -46,7 +46,7 @@ CREATE TABLE `products` (
     `kor_name` VARCHAR(191) NOT NULL,
     `eng_name` VARCHAR(191) NOT NULL,
     `price` DECIMAL(10, 1) NOT NULL,
-    `quantity` INTEGER NULL DEFAULT 10,
+    `quantity` INTEGER NULL DEFAULT 1000,
     `category_id` INTEGER NOT NULL,
     `subcategory_id` INTEGER NOT NULL,
     `sale_rate` DECIMAL(10, 1) NULL,
@@ -71,7 +71,8 @@ CREATE TABLE `carts` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `product_id` INTEGER NOT NULL,
     `user_id` INTEGER NOT NULL,
-    `created_at` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `quantity` INTEGER NOT NULL,
+    `created_at` DATETIME(3) NULL DEFAULT CURRENT_TIMESTAMP(3),
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

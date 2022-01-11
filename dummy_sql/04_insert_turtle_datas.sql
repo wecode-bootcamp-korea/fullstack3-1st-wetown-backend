@@ -9,7 +9,7 @@ VALUES
 ("파충류 & 물고기 어항","Reptile & Fish Bowl",50000,3,3,true,25), 
 ("파충류 수족관(어항)","Reptile Water Tank",8000,3,3,true,10), 
 ("파충류 먹이","Reptile Feed",15000,3,1,true,20), 
-("거북이 모자","Turtle Hat",7500,3,2,true,null;
+("거북이 모자","Turtle Hat",7500,3,2,true,null);
 
 
 INSERT INTO images(url, is_main, product_id) 
