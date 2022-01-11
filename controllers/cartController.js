@@ -118,7 +118,7 @@ const deleteCart = async (req, res) => {
   }
 };
 
-const AllDeleteCartItem = async (req, res) => {
+const allDeleteCartItem = async (req, res) => {
   try {
     const { user_id, product_id, quantity } = req.body;
 
@@ -136,5 +136,5 @@ export default {
   createCart,
   updateCart,
   deleteCart,
-  AllDeleteCartItem,
+  allDeleteCartItem,
 };

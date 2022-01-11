@@ -68,7 +68,7 @@ const deleteCart = async (user_id, product_id) => {
   }
 };
 
-const AllDeleteCartItem = async (user_id, product_id, quantity) => {
+const allDeleteCartItem = async (user_id, product_id, quantity) => {
   for (let i = 0; i < product_id.length; i++) {
     const minusQuantity = await productDetailDao.productDetail(product_id[i]);
 
@@ -87,5 +87,5 @@ export default {
   createCart,
   updateCart,
   deleteCart,
-  AllDeleteCartItem,
+  allDeleteCartItem,
 };

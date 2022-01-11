@@ -90,7 +90,7 @@ const deleteCartItem = async (user_id, product_id) => {
     `;
 };
 
-const AllDeleteCartItem = async user_id => {
+const allDeleteCartItem = async user_id => {
   return await prisma.$queryRaw`
     DELETE FROM
       carts
@@ -105,5 +105,5 @@ export default {
   createCartItem,
   updateItemQuantity,
   deleteCartItem,
-  AllDeleteCartItem,
+  allDeleteCartItem,
 };
