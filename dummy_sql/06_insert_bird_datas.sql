@@ -13,16 +13,16 @@ INSERT INTO products(kor_name, eng_name, price, category_id, subcategory_id, is_
 
 INSERT INTO images(url, is_main, product_id) 
   VALUES
-    ("https://ae01.alicdn.com/kf/H89f2cf27def443caa4180b2ac6937e7eZ.jpg", true, 41),
-    ("https://ae01.alicdn.com/kf/Hcee67e21d9424429b3631ac9a995da68r.jpg", true, 42),
-    ("https://ae01.alicdn.com/kf/Ha3930e4bac0f4498bf7ef9dad66fb9e4A.jpg", true, 43),
-    ("https://ae01.alicdn.com/kf/H62d42fb6333449cbbf003a78b0cbddbdi.jpg", true, 44),
-    ("https://ae01.alicdn.com/kf/H589c41c44c9243808e5bc1ff23015a6fs.jpg", true, 45),
-    ("https://ae01.alicdn.com/kf/Hb97eddf4d5c94c74880540a89483661c3.jpg", true, 46),
-    ("https://ae01.alicdn.com/kf/Hde0e1180113541c2975863eb8ed3f16cn.jpg", true, 47),
-    ("https://ae01.alicdn.com/kf/H67247f826f9c4bfbb5153062babf4addW.jpg", true, 48),
-    ("https://ae01.alicdn.com/kf/Hedc3b1bba60948418d02fcf25560dfaaH.jpg", true, 49),
-    ("https://ae01.alicdn.com/kf/Ha1d32e75c1974cbe8c261a56c40755a4b.png", true, 50);
+    ("/images/productListMain/bird/bird_house_01.png", true, 41),
+    ("/images/productListMain/bird/bird_house_02.png", true, 42),
+    ("/images/productListMain/bird/bird_food_01.png", true, 43),
+    ("/images/productListMain/bird/bird_health_01.png", true, 44),
+    ("/images/productListMain/bird/bird_toy_01.png", true, 45),
+    ("/images/productListMain/bird/bird_toy_02.png", true, 46),
+    ("/images/productListMain/bird/bird_toy_03.png", true, 47),
+    ("/images/productListMain/bird/bird_toy_04.png", true, 48),
+    ("/images/productListMain/bird/bird_house_03.png", true, 49),
+    ("/images/productListMain/bird/bird_toy_05.png", true, 50),
 
 
 INSERT INTO images(url, product_id) 
@@ -47,6 +47,7 @@ INSERT INTO images(url, product_id)
     ("https://ae01.alicdn.com/kf/Hb96948b3362d4334b05f8e12ed51afc0l.jpg", 43),
     ("https://ae01.alicdn.com/kf/H4a1316924da1487ea9cbf1ecf315a9a36.jpg", 43),
 
+    ("https://ae01.alicdn.com/kf/H62d42fb6333449cbbf003a78b0cbddbdi.jpg", 44),
     ("https://ae01.alicdn.com/kf/H5addca25d93a43bb9e4a526ce869a00e9.jpg", 44),
     ("https://ae01.alicdn.com/kf/H171a35802f034f6bb8fd2d9e4e5ffd51S.jpg", 44),
     ("https://ae01.alicdn.com/kf/Ha055f7b05d9e4522afad203ce63b944dN.jpg", 44),
