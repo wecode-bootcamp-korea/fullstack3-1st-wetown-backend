@@ -117,9 +117,24 @@ const deleteCart = async (req, res) => {
     return res.status(err.StatusCode || 500).send({ message: err.message });
   }
 };
+
+const allDeleteCartItem = async (req, res) => {
+  try {
+    const { user_id, product_id, quantity } = req.body;
+
+    const result = cartService.AllDeleteCartItem(user_id, product_id, quantity);
+
+    return res.status(200).send({ message: '구매완료', result });
+  } catch (err) {
+    console.log(err);
+    return res.status(500).send({ message: err.message });
+  }
+};
+
 export default {
   cartList,
   createCart,
   updateCart,
   deleteCart,
+  allDeleteCartItem,
 };

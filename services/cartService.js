@@ -1,4 +1,6 @@
 import { cartDao } from '../models';
+import { productDao } from '../models';
+import { productDetailDao } from '../models';
 
 const errStatusCode = 400;
 
@@ -65,9 +67,25 @@ const deleteCart = async (user_id, product_id) => {
     throw error;
   }
 };
+
+const allDeleteCartItem = async (user_id, product_id, quantity) => {
+  for (let i = 0; i < product_id.length; i++) {
+    const minusQuantity = await productDetailDao.productDetail(product_id[i]);
+
+    if (minusQuantity[0].quantity < 0) throw new Error('수량부족');
+  }
+
+  for (let i = 0; i < product_id.length; i++) {
+    await productDao.updateQuantity(product_id[i], quantity[i]);
+  }
+
+  return await cartDao.AllDeleteCartItem(user_id);
+};
+
 export default {
   cartList,
   createCart,
   updateCart,
   deleteCart,
+  allDeleteCartItem,
 };
