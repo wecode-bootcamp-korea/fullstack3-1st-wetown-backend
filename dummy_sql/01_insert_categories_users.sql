@@ -1,4 +1,5 @@
-INSERT INTO categories(name) VALUES("dog"),("cat"),("turtle"),("hamster"),("bird");
+INSERT INTO categories(name) VALUES
+("dog"),("cat"),("turtle"),("hamster"),("bird");
 
 INSERT INTO subcategories(name,category_id)
 VALUES
