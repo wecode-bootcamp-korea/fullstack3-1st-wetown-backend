@@ -14,7 +14,8 @@ const productDetail = async productId => {
       sale_rate,
       categories.name as cate_name,
       subcategories.name as subcate_name,
-      url 
+      url,
+      images.id as image_id
     FROM
       products
     JOIN
