@@ -22,7 +22,7 @@ INSERT INTO images(url, is_main, product_id)
     ("/images/productListMain/bird/bird_toy_03.png", true, 47),
     ("/images/productListMain/bird/bird_toy_04.png", true, 48),
     ("/images/productListMain/bird/bird_house_03.png", true, 49),
-    ("/images/productListMain/bird/bird_toy_05.png", true, 50),
+    ("/images/productListMain/bird/bird_toy_05.png", true, 50);
 
 
 INSERT INTO images(url, product_id) 

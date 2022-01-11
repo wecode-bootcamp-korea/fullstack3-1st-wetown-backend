@@ -7,7 +7,7 @@ VALUES
 ("줄다리기 장난감", "Tug-of-war Toy", 16780, 1, 1, true, 17 ),
 ("빨간색 개 뼈다구", "Hot Red Dog Bone", 1290, 1, 1, false, null),
 ("핑크 돼지 배게", "Pink Piggy Pillow", 483430, 1, 3, true, 35),
-("대형 침대 매트리스", "Fluffy Extra Large Mattress", 322100, 1, 3, false, null),
+("대형 침대 매트리스", "Fluffy Extra Large Mattress", 322100, 1, 3, false, null);
 
 
 INSERT INTO images(url, is_main,product_id) 
@@ -19,10 +19,9 @@ VALUES
 ("/images/productListMain/dog/dog_toy_55.png", true, 55),
 ("/images/productListMain/dog/dog_toy_56.png", true, 56),
 ("/images/productListMain/dog/dog_house_57.png", true, 57),
-("/images/productListMain/dog/dog_house_58.png", true, 58),
+("/images/productListMain/dog/dog_house_58.png", true, 58);
 
 
--- 여기서는 그냥 기존 dog data 복붙입니다 따라서 위에 메인 이미지와 일치 하지 않습니다.
 INSERT INTO images(url, product_id)
 VALUES
 ("https://ae01.alicdn.com/kf/H94d1a3fcc00e48dba095ae7d9d253b54r/-.jpg_Q90.jpg_.webp", 51),
@@ -49,4 +48,4 @@ VALUES
 ("https://sc04.alicdn.com/kf/H031670453b674fa1abed5eaf0ff220157.png", 57),
 ("https://sc04.alicdn.com/kf/Hc8d495292b6a4c4f88a451b8e9fa5a7dk.jpg", 58),
 ("https://sc04.alicdn.com/kf/H20bcdc129e014e9594a9d7c09ab026f5D.jpg", 58),
-("https://sc04.alicdn.com/kf/H874433bc953943c2b9828215c250b76aa.jpg", 58),
+("https://sc04.alicdn.com/kf/H874433bc953943c2b9828215c250b76aa.jpg", 58);
