@@ -9,16 +9,16 @@ INSERT INTO
     is_new,
     sale_rate
   ) VALUES (
-    "파충류 성장 빛",
-    "EDJ T5 Light",
+    "거북이 바위 쉘터",
+    "Turtle Rock Shelter",
     25000,
     3,
     3,
     true,
     15
   ), (
-    "저수위 탱크 여과기",
-    "Tank Filter",
+    "파충류 먹이 귀뚜라미",
+    "Reptile Feed Crickets",
     8500,
     3,
     3,
@@ -33,33 +33,33 @@ INSERT INTO
     true,
     15
   ), (
-    "난방매트",
-    "Heating Mat",
+    "거북이 딜라이트",
+    "Turtle Delite",
     3000,
     3,
     4,
     true,
     15
   ), (
-    "바이오틱 사료",
-    "Biotic Feed",
+    "껍질 보호 약품",
+    "REPTISAFE",
     10000,
     3,
     1,
     true,
     15
   ), (
-    "펠렛 OEM 사료",
-    "Pellet OEM Feed",
+    "파충류 물받이",
+    "Reptile Water Dish",
     1000,
     3,
     1,
     true,
     15
   ), (
-    "파충류 칼슘 피드",
-    "Reptile Calcium Feed",
-    1000,
+    "파충류 & 물고기 어항",
+    "Reptile & Fish Bowl",
+    10000,
     3,
     4,
     true,
@@ -97,43 +97,43 @@ INSERT INTO
    is_main,
   product_id
   ) VALUES (
-    "https://sc04.alicdn.com/kf/Hf61c32af6ba14cfea601963de994473dS.jpg",
+    "http://localhost:3000/images/productListMain/turtle/rockshield.png",
     true,
     21
   ), (
-    "https://sc04.alicdn.com/kf/H145d485c87944bdcb1a6eb9a099e7b179.jpg",
+    "http://localhost:3000/images/productListMain/turtle/crickets.png",
     true,
     22
   ), (
-    "https://sc04.alicdn.com/kf/Hd9d113025ceb4037adcb2262a82f0683D.jpg",
+    "http://localhost:3000/images/productListMain/turtle/rocks.png",
     true,
     23
   ), (
-    "https://sc04.alicdn.com/kf/H603a3a44d83e4e7a947214e79bdac378z.jpg",
+    "http://localhost:3000/images/productListMain/turtle/delites.png",
     true,
     24
   ), (
-    "https://sc04.alicdn.com/kf/Ha93545f4b4584a5e95d302122f2ca9c8B.jpg",
+    "http://localhost:3000/images/productListMain/turtle/reptilesafe.png",
     true,
     25
   ), (
-    "https://sc04.alicdn.com/kf/HTB1x7I0V9zqK1RjSZPcq6zTepXaH.jpg",
+    "http://localhost:3000/images/productListMain/turtle/waterbowl.png",
     true,
     26
   ), (
-    "https://sc04.alicdn.com/kf/H3de7585c7c264fa0a8c00e6621244561L.jpg",
+    "http://localhost:3000/images/productListMain/turtle/fishbowl.png",
     true,
     27
   ), (
-    "https://sc04.alicdn.com/kf/H90456422bae54570a12bd232cf92b10ah.jpg",
+    "http://localhost:3000/images/productListMain/turtle/reptilehome.png",
     true,
     28
   ), (
-    "https://sc04.alicdn.com/kf/HTB1UPkubBOD3KVjSZFFq6An9pXaP.jpg",
+    "http://localhost:3000/images/productListMain/turtle/feeds.png",
     true,
     29
   ), (
-    "https://sc04.alicdn.com/kf/UT8GrSiXv8XXXcUQpbXD.jpg",
+    "http://localhost:3000/images/productListMain/turtle/turtle_10.png",
     true,
     30
   );
