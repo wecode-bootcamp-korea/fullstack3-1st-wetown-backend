@@ -1,29 +1,29 @@
 INSERT INTO products(kor_name, eng_name, price, category_id, subcategory_id, is_new, sale_rate)
 VALUES 
-("파충류 성장 빛","EDJ T5 Light",25000,3,3,true,15), 
-("저수위 탱크 여과기","Tank Filter",8500,3,3,true,15), 
-("파충류 테라리움","Reptile Terrarium",45000,3,3,true,15), 
-("난방매트","Heating Mat",3000,3,4,true,15), 
-("바이오틱 사료","Biotic Feed",10000,3,1,true,15), 
-("펠렛 OEM 사료","Pellet OEM Feed",1000,3,1,true,15), 
-("파충류 칼슘 피드","Reptile Calcium Feed",1000,3,4,true,15), 
-("수족관을 위한 백색 경석 바위","White Rock",8000,3,2,true,15), 
-("해상 수지 인공 산호초","Artifical Coral Reef",15000,3,2,true,15), 
-("변비, 장을 위한 영양제","Tortoise Care",7500,3,4,true,15);
+("거북이 바위 쉘터","Turtle Rock Shelter",25000,3,2,true,15), 
+("파충류 먹이 귀뚜라미","Reptile Feed Crickets",8500,3,1,true,15), 
+("파충류 테라리움","Reptile Terrarium",45000,3,3,true,20), 
+("거북이 딜라이트","Turtle Delite",5000,3,4,true,null), 
+("껍질 보호 약품","REPTISAFE",10000,3,4,true,10), 
+("파충류 물그릇","Reptile Water Dish",10000,3,3,true,15), 
+("파충류 & 물고기 어항","Reptile & Fish Bowl",50000,3,3,true,25), 
+("파충류 수족관(어항)","Reptile Water Tank",8000,3,3,true,10), 
+("파충류 먹이","Reptile Feed",15000,3,1,true,20), 
+("거북이 모자","Turtle Hat",7500,3,2,true,null;
 
 
 INSERT INTO images(url, is_main, product_id) 
 VALUES 
-("https://sc04.alicdn.com/kf/Hf61c32af6ba14cfea601963de994473dS.jpg",true,21), 
-("https://sc04.alicdn.com/kf/H145d485c87944bdcb1a6eb9a099e7b179.jpg", true, 22), 
-("https://sc04.alicdn.com/kf/Hd9d113025ceb4037adcb2262a82f0683D.jpg", true, 23), 
-("https://sc04.alicdn.com/kf/H603a3a44d83e4e7a947214e79bdac378z.jpg", true, 24), 
-("https://sc04.alicdn.com/kf/Ha93545f4b4584a5e95d302122f2ca9c8B.jpg", true, 25), 
-("https://sc04.alicdn.com/kf/HTB1x7I0V9zqK1RjSZPcq6zTepXaH.jpg", true, 26), 
-("https://sc04.alicdn.com/kf/H3de7585c7c264fa0a8c00e6621244561L.jpg", true, 27), 
-("https://sc04.alicdn.com/kf/H90456422bae54570a12bd232cf92b10ah.jpg", true, 28), 
-("https://sc04.alicdn.com/kf/HTB1UPkubBOD3KVjSZFFq6An9pXaP.jpg", true, 29), 
-("https://sc04.alicdn.com/kf/UT8GrSiXv8XXXcUQpbXD.jpg", true, 30);
+("http://localhost:3000/images/productListMain/turtle/rockshield.png",true,21), 
+("http://localhost:3000/images/productListMain/turtle/crickets.png", true, 22), 
+("http://localhost:3000/images/productListMain/turtle/rocks.png", true, 23), 
+("http://localhost:3000/images/productListMain/turtle/delites.png", true, 24), 
+("http://localhost:3000/images/productListMain/turtle/reptilesafe.png", true, 25), 
+("http://localhost:3000/images/productListMain/turtle/waterbowl.png", true, 26), 
+("http://localhost:3000/images/productListMain/turtle/fishbowl.png", true, 27), 
+("http://localhost:3000/images/productListMain/turtle/reptilehome.png", true, 28), 
+("http://localhost:3000/images/productListMain/turtle/feeds.png", true, 29), 
+("http://localhost:3000/images/productListMain/turtle/turtle_10.png", true, 30);
 
 
 INSERT INTO images(url, product_id)
