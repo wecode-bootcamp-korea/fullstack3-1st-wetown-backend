@@ -14,6 +14,6 @@ router.use('/product/filter', productFilterRouter);
 router.use('/cart', auth.authentication, cartRouter);
 router.use('/user', userRouter);
 router.use('/product', productDetailRouter);
-router.use('/product/pictures', productPicRouter);
+router.use('/productpictures', productPicRouter);
 
 export default router;
