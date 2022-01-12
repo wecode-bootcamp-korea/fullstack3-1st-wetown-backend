@@ -122,7 +122,7 @@ const allDeleteCartItem = async (req, res) => {
   try {
     const { user_id, product_id, quantity } = req.body;
 
-    const result = cartService.AllDeleteCartItem(user_id, product_id, quantity);
+    const result = cartService.allDeleteCartItem(user_id, product_id, quantity);
 
     return res.status(200).send({ message: '구매완료', result });
   } catch (err) {

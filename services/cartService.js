@@ -79,7 +79,7 @@ const allDeleteCartItem = async (user_id, product_id, quantity) => {
     await productDao.updateQuantity(product_id[i], quantity[i]);
   }
 
-  return await cartDao.AllDeleteCartItem(user_id);
+  return await cartDao.allDeleteCartItem(user_id);
 };
 
 export default {
