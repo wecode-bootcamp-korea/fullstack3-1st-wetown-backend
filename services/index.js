@@ -3,6 +3,7 @@ import productFilterServices from './productFilterServices';
 import userServices from './userServices';
 import productDetailServices from './productDetailServices';
 import cartService from './cartService';
+import productPicService from './productPicService';
 
 export {
   categoryListService,
@@ -10,4 +11,5 @@ export {
   userServices,
   productDetailServices,
   cartService,
+  productPicService,
 };

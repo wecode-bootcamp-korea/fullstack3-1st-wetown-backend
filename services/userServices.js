@@ -9,12 +9,6 @@ const makeHash = async password => {
   return await bcrypt.hash(password, 10);
 };
 
-import bcrypt from 'bcryptjs'; // 단방향 암호화
-import jwt from 'jsonwebtoken';
-
-const makeHash = async password => {
-  return await bcrypt.hash(password, 10);
-};
 //회원가입
 const signUp = async (
   name,

@@ -4,6 +4,7 @@ import userDao from './userDao';
 import productDetailDao from './productDetailDao';
 import cartDao from './cartDao';
 import productDao from './productDao';
+import productPicDao from './productPicDao';
 
 export {
   categoryListDao,
@@ -12,4 +13,5 @@ export {
   productDetailDao,
   cartDao,
   productDao,
+  productPicDao,
 };
