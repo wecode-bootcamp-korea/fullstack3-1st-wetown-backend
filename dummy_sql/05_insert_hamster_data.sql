@@ -1,30 +1,28 @@
 INSERT INTO products(kor_name, eng_name, price, category_id, subcategory_id, is_new, sale_rate)
   VALUES
-  ("햄스터 해먹 침대 ", "Hamster Bed Hanging Hammock House", 5000, 4, 3, true),
-  ("햄스터 나무 장난감", "Hamster Natural Wooden Chew Toys", 15000, 4, 2, true),
-  ("바퀴달린 햄스터 케이지", "Hamster Cages with Wheels",45000, 4, 3, true),
-  ("햄스터 치아 건강 관리 장난감", "Hamster Teeth Molar Chew Toy", 5000, 4, 4, true),
+  ("햄스터 해먹 침대 ", "Hamster Bed Hanging Hammock House", 5000, 4, 3, true,null),
+  ("햄스터 나무 장난감", "Hamster Natural Wooden Chew Toys", 15000, 4, 2, true,null),
+  ("예술적인 나의 햄스터", "Easel for Hamsters",45000, 4, 2, true,null),
+  ("햄스터 치아 건강 관리 간식", "Hamster Teeth Molar Chew Snack", 5000, 4, 4, true,null),
   ("햄스터 패스트 푸드", "Quik Hamster Food", 4500, 4, 1, true, 10),
-  ("햄스터 씹는 간식", "Hamster Chew Treat", 2000, 4, 1, false),
-  ("햄스터 이동 다리", " Hamster House Bridge", 10000, 4, 1, true, 10),
+  ("햄스터 씹는 간식", "Hamster Chew Treat", 2000, 4, 1, false,null),
+  ("햄스터 저높이 이동 다리", " Hamster House Bridge", 10000, 4, 1, true, 10),
   ("햄스터 급냉동 고기간식 10종", "Hamster 10 kinds of meat freeze-dried", 15000, 4, 1, true, 15),
-  ("햄스터 마른 야채 간식", "Hamster Assorted Dried Vegetable Snacks", 8500, 4, 1, true),
-  ("햄스터 조깅 운동 볼", "Hamster Playing Jogging Exercise Ball", 2500, 4, 4, true);
+  ("햄스터 마른 곡식 간식", "Hamster Assorted Wheat Snacks", 8500, 4, 1, true, null),
+  ("햄스터 조깅 운동 롤러", "Hamster Playing Jogging Exercise Ball", 2500, 4, 4, true, null);
 
-
-
-INSERT INTO images(url, is_main, product_id) 
+INSERT INTO images(url, is_main, product_id)
   VALUES
-    ("https://sc04.alicdn.com/kf/H13b5ee7461d14a608e1cb37b24f9dcd82.jpg", true, 31),
-    ("https://sc04.alicdn.com/kf/H4ac386225d4c432da2e278a1e429cf87a.jpg", true, 32),
-    ("https://sc04.alicdn.com/kf/H10fa5dcbe850496e928c3bbf1a93451a0.png", true, 33),
-    ("https://sc04.alicdn.com/kf/Ha21eb937d6db4049add382b58996deea1.jpg", true, 34),
-    ("https://sc04.alicdn.com/kf/UTB8TtnvtMnJXKJkSaelq6xUzXXaK.jpg", true, 35),
-    ("https://sc04.alicdn.com/kf/H4ea40cdefbae4a5c8d5198713366a851Q.jpg_480x480.jpg", true, 36),
-    ("https://sc04.alicdn.com/kf/H4b4d926aeab84a21915cad4f7b697ee6Y.jpg", true, 37),
-    ("https://sc04.alicdn.com/kf/Ha0f10091d6534ca1aa2dd2ccc4468b53y.jpg_480x480.jpg", true, 38),
-    ("https://sc04.alicdn.com/kf/H78e9a97d9f0341e0832d74427d87f661X.png_480x480.jpg", true, 39),
-    ("https://sc04.alicdn.com/kf/H7366209e6f8f403ba9f2ee5c54d8c373C.jpg_480x480.jpg", true, 40);
+    ("/images/productListMain/hamster_house_31.png", true, 31),
+    ("/images/productListMain/hamster_toy_32.png", true, 32),
+    ("/images/productListMain/hamster_toy_33.png", true, 33),
+    ("/images/productListMain/hamster_food_34.png", true, 34),
+    ("/images/productListMain/hamster_food_35.png", true, 35),
+    ("/images/productListMain/hamster_food_36.png", true, 36),
+    ("/images/productListMain/hamster_toy_37.png", true, 37),
+    ("/images/productListMain/hamster_food_38.png", true, 38),
+    ("/images/productListMain/hamster_food_39.png", true, 39),
+    ("/images/productListMain/hamster_toy_40.png", true, 40);
 
 INSERT INTO images(url, product_id) 
   VALUES
