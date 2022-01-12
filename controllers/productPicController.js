@@ -2,7 +2,6 @@ import { productPicServices } from '../services';
 
 const productPic = async (req, res) => {
   try {
-    // const category = req.headers;
     const pic = await productPicServices.productPic();
 
     res.status(200).json(pic);
