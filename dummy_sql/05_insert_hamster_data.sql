@@ -13,16 +13,16 @@ INSERT INTO products(kor_name, eng_name, price, category_id, subcategory_id, is_
 
 INSERT INTO images(url, is_main, product_id)
   VALUES
-    ("/images/productListMain/hamster_house_31.png", true, 31),
-    ("/images/productListMain/hamster_toy_32.png", true, 32),
-    ("/images/productListMain/hamster_toy_33.png", true, 33),
-    ("/images/productListMain/hamster_food_34.png", true, 34),
-    ("/images/productListMain/hamster_food_35.png", true, 35),
-    ("/images/productListMain/hamster_food_36.png", true, 36),
-    ("/images/productListMain/hamster_toy_37.png", true, 37),
-    ("/images/productListMain/hamster_food_38.png", true, 38),
-    ("/images/productListMain/hamster_food_39.png", true, 39),
-    ("/images/productListMain/hamster_toy_40.png", true, 40);
+    ("/images/productListMain/hamster/hamster_house_31.png", true, 31),
+    ("/images/productListMain/hamster/hamster_toy_32.png", true, 32),
+    ("/images/productListMain/hamster/hamster_toy_33.png", true, 33),
+    ("/images/productListMain/hamster/hamster_food_34.png", true, 34),
+    ("/images/productListMain/hamster/hamster_food_35.png", true, 35),
+    ("/images/productListMain/hamster/hamster_food_36.png", true, 36),
+    ("/images/productListMain/hamster/hamster_toy_37.png", true, 37),
+    ("/images/productListMain/hamster/hamster_food_38.png", true, 38),
+    ("/images/productListMain/hamster/hamster_food_39.png", true, 39),
+    ("/images/productListMain/hamster/hamster_toy_40.png", true, 40);
 
 INSERT INTO images(url, product_id) 
   VALUES
