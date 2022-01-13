@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "babel-node server.js",
-    "distribute": "npm i && pm2 start server.js --name <wetown-back> -i max"
+    "distribute": "npm i && prisma generate && pm2 start server.js --name wetown-back -i max"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +32,7 @@
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
     "prettier-plugin-prisma": "^3.7.0",
-    "prisma": "^3.7.0"
+    "prisma": "^3.7.0",
+    "pm2": "^5.1.2"
   }
 }
