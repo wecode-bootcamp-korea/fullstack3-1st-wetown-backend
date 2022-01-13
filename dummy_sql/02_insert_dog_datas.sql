@@ -1,30 +1,30 @@
 INSERT INTO products(kor_name, eng_name, price, category_id, subcategory_id,is_new, sale_rate)
 VALUES
-("비바람에 끄떡 없는 개집", "sturdy house", 48343, 1, 3, true, 35),
-("편안한 쿠션 집", "cozy cushion house", 32210, 1, 3, false, null),
-("접이식 쿠션 집", "foldable cushion house", 25000, 1, 3, false, null),
-("영양 가득 중국산 개 사료", "High nutrition dog food made in China", 12200, 1, 1, true, 21),
-("영양 높은 건식 개 사료", "Nutritional dry dog food", 16780, 1, 1, true, 17 ),
-("프리미엄 건식 개 사료", "Priminum dry dog food", 1290, 1, 1, false,null),
-("삑삑이 강아지 장난감", "squeaky puppy toy", 1220, 1, 2, true, 11),
+("비바람에 끄떡 없는 개집", "Sturdy House", 48343, 1, 3, true, 35),
+("편안한 쿠션 집", "Cozy Cushion House", 32210, 1, 3, false, null),
+("접이식 텐트 집", "Tepee Tent House", 25000, 1, 3, false, null),
+("영양 가득 중국산 개 사료", "High nutrition Dog food made in China", 12200, 1, 1, true, 21),
+("영양 높은 건식 개 사료", "Nutritional Dry Dog food", 16780, 1, 1, true, 17 ),
+("프리미엄 건식 개 사료", "Premium Dry Dog food", 1290, 1, 1, false, null),
+("삑삑이 강아지 장난감", "Squeaky puppy toy", 1220, 1, 2, true, 11),
 ("강아지 점심모양 장난감", "Lunch set puppy toy", 67880, 1, 2, false, 89),
-("개 목 보호대","dog neck protection",60900,1,4,true,20),
-("개 멀티비타민", "dog multivitamin", 432221, 1, 4, false,null);
+("개 목 보호대","Dog neck protection",60900,1,4, true, 20),
+("개 멀티비타민", "Dog multivitamin", 432221, 1, 4, false, null);
 
 
 
 INSERT INTO images(url, is_main,product_id) 
 VALUES
-("https://ae01.alicdn.com/kf/H4cda1c2d4acf4fc2b449f6d6298ad4b1g/-.jpg_640x640.jpg", true, 1),
-("https://ae01.alicdn.com/kf/Hf8dfc2a187bb4e27b1f4290c2f8a41137/-.jpg_Q90.jpg_.webp", true, 2),
-("https://ae01.alicdn.com/kf/Ha4b44ef2c6364b609b8498531d221c86O/-.jpg_Q90.jpg_.webp",true,3),
-("https://sc04.alicdn.com/kf/H9008081e97ca40f2a157519c0068c8b1S.jpg", true, 4),
-("https://sc04.alicdn.com/kf/H2cd11cb1907f49ae9faa03c4e16a4b9ec.jpg",true, 5),
-("https://sc04.alicdn.com/kf/Hf2ff8e0c1ecf4ce8b3e9adcd8e558ba3L.jpg",true, 6),
-("https://sc04.alicdn.com/kf/H3018792b9a574ce3b3062089e00dde1cz.jpg",true, 7),
-("https://sc04.alicdn.com/kf/Hef4335f07c344c458e13f718d17caa55v.jpg",true, 8),
-("https://sc04.alicdn.com/kf/Ha710205e8d664567b52d6801648512791.png", true, 9),
-("https://sc04.alicdn.com/kf/Hf79c53f729c2483a81f57d81544384dbj.jpg",true,10)
+("/images/productListMain/dog/dog_house_01.png", true, 1),
+("/images/productListMain/dog/dog_house_02.png", true, 2), 
+("/images/productListMain/dog/dog_house_03.png", true,3),
+("/images/productListMain/dog/dog_food_01.png", true, 4),
+("/images/productListMain/dog/dog_food_02.png", true, 5),
+("/images/productListMain/dog/dog_food_03.png", true, 6),
+("/images/productListMain/dog/dog_toy_squeeky.png", true, 7),
+("/images/productListMain/dog/dog_toy_lunch.png", true, 8),
+("/images/productListMain/dog/dog_toy_flower.png", true, 9),
+("/images/productListMain/dog/dog_health_01.png", true,10);
 
 INSERT INTO images(url, product_id)
 VALUES
@@ -58,4 +58,4 @@ VALUES
 ("https://sc04.alicdn.com/kf/Hd981efca5f734939bc182bf17ad001bdV.png", 9),
 ("https://sc04.alicdn.com/kf/H1a13d0f9a6bc4f7d883971b58a8f6d528.jpg",10),
 ("https://sc04.alicdn.com/kf/H85ac25fdbec5460690c15d11182ada21Z.jpg", 10),
-("https://sc04.alicdn.com/kf/Hcfced8b631824c72a66d27c337cb7dd8Z.jpg", 10)
+("https://sc04.alicdn.com/kf/Hcfced8b631824c72a66d27c337cb7dd8Z.jpg", 10);

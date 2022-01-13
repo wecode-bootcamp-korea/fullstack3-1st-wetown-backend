@@ -52,7 +52,7 @@ model products {
   kor_name       String
   eng_name       String
   price          Decimal         @db.Decimal(10, 1)
-  quantity       Int?            @default(10)
+  quantity       Int?            @default(1000)
   category_id    Int
   subcategory_id Int
   sale_rate      Decimal?        @db.Decimal(10, 1)
@@ -73,10 +73,11 @@ model images {
 }
 
 model carts {
-  id         Int      @id @default(autoincrement())
+  id         Int       @id @default(autoincrement())
   product_id Int
   user_id    Int
-  created_at DateTime @default(now())
-  products   products @relation(fields: [product_id], references: [id])
-  users      users    @relation(fields: [user_id], references: [id])
+  quantity   Int
+  created_at DateTime? @default(now())
+  products   products  @relation(fields: [product_id], references: [id])
+  users      users     @relation(fields: [user_id], references: [id])
 }
