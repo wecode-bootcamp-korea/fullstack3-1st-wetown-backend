@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "babel-node server.js",
-    "distribute": "npm i && prisma generate && pm2 start server.js --name wetown-back -i max"
+    "distribute": "npm i && npx prisma generate && pm2 start --name wetown-back -i max npm -- run start"
   },
   "keywords": [],
   "author": "",

@@ -14,16 +14,16 @@ VALUES
 
 INSERT INTO images(url, is_main, product_id) 
 VALUES 
-("http://localhost:3000/images/productListMain/turtle/rockshield.png",true,21), 
-("http://localhost:3000/images/productListMain/turtle/crickets.png", true, 22), 
-("http://localhost:3000/images/productListMain/turtle/rocks.png", true, 23), 
-("http://localhost:3000/images/productListMain/turtle/delites.png", true, 24), 
-("http://localhost:3000/images/productListMain/turtle/reptilesafe.png", true, 25), 
-("http://localhost:3000/images/productListMain/turtle/waterbowl.png", true, 26), 
-("http://localhost:3000/images/productListMain/turtle/fishbowl.png", true, 27), 
-("http://localhost:3000/images/productListMain/turtle/reptilehome.png", true, 28), 
-("http://localhost:3000/images/productListMain/turtle/feeds.png", true, 29), 
-("http://localhost:3000/images/productListMain/turtle/turtle_10.png", true, 30);
+("/images/productListMain/turtle/rockshield.png",true,21), 
+("/images/productListMain/turtle/crickets.png", true, 22), 
+("/images/productListMain/turtle/rocks.png", true, 23), 
+("/images/productListMain/turtle/delites.png", true, 24), 
+("/images/productListMain/turtle/reptilesafe.png", true, 25), 
+("/images/productListMain/turtle/waterbowl.png", true, 26), 
+("/images/productListMain/turtle/fishbowl.png", true, 27), 
+("/images/productListMain/turtle/reptilehome.png", true, 28), 
+("/images/productListMain/turtle/feeds.png", true, 29), 
+("/images/productListMain/turtle/turtle_10.png", true, 30);
 
 
 INSERT INTO images(url, product_id)
