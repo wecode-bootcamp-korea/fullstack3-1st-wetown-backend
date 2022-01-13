@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "start": "nodemon server.js --exec babel-node "
+    "start": "babel-node server.js",
+    "distribute": "npm i && pm2 start server.js --name <wetown-back> -i max"
   },
   "keywords": [],
   "author": "",
