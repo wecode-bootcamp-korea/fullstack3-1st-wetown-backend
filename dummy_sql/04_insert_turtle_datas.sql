@@ -19,7 +19,7 @@ VALUES
 ("/images/productListMain/turtle/rocks.png", true, 23), 
 ("/images/productListMain/turtle/delites.png", true, 24), 
 ("/images/productListMain/turtle/reptilesafe.png", true, 25), 
-("images/productListMain/turtle/waterbowl.png", true, 26), 
+("/images/productListMain/turtle/waterbowl.png", true, 26), 
 ("/images/productListMain/turtle/fishbowl.png", true, 27), 
 ("/images/productListMain/turtle/reptilehome.png", true, 28), 
 ("/images/productListMain/turtle/feeds.png", true, 29), 
